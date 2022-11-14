@@ -30,7 +30,7 @@ const generators = [
   {
     name: 'CNPJ',
     description: 'Gerar CNPJ (Cadastro Nacional da Pessoa Jurídica).',
-    href: '/helpers?section=generator&helper=cpf',
+    href: '/helpers?section=generator&helper=cnpj',
     icon: BuildingStorefrontIcon,
   },
 ]

@@ -3,7 +3,9 @@ import { FunnelIcon, MinusIcon, PlusIcon } from '@heroicons/react/20/solid'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { useRouter } from 'next/router'
 import { Fragment, ReactNode, useState } from 'react'
-import { CpfGenerator, CnpjGenerator } from './generators'
+
+import Alert from '../components/primitives/Alert'
+import { CnpjGenerator, CpfGenerator } from './generators'
 import { CnpjValidator, CpfValidator } from './valitators'
 
 const filters = [
@@ -130,7 +132,20 @@ export default function SideMenu({ section, helper }: SideMenuProps) {
         </Transition.Root>
 
         <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-baseline justify-between border-b border-gray-200 pt-5 pb-6">
+          <Alert
+            message={
+              <div className="flex flex-col">
+                <p>
+                  Nosso gerador intenção ajudar programadores gerar dados válidos. Os números são
+                  gerados de forma aleatória, respeitando as regras de criação de cada documento.{' '}
+                  <b>
+                    A má utilização dos dados aqui gerados é de total responsabilidade do usuário.
+                  </b>
+                </p>
+              </div>
+            }
+          />
+          <div className="flex items-baseline justify-between border-b border-gray-200 pt-2 pb-6">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900">Nossos Helpers ❤</h1>
 
             <div className="flex items-center">

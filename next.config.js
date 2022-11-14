@@ -5,6 +5,9 @@ const nextConfig = {
   env: {
     PAYPAL_DONATE: process.env.PAYPAL_DONATE,
   },
+  images: {
+    unoptimized: true,
+  },
 }
 
 module.exports = nextConfig
