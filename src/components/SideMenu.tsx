@@ -183,10 +183,11 @@ export default function SideMenu({ section, helper }: SideMenuProps) {
                                   rounded-md py-2 group hover:bg-secondary/20
                                   ${selected ? 'bg-secondary/10' : ''}
                                   `}
-                                  onClick={() => {
-                                    console.log(`/helpers?section=${sectionData.id}&helper=${option.id}`)
-                                    router.push(`/helpers?section=${sectionData.id}&helper=${option.id}`)
-                                  }}
+                                  onClick={() =>
+                                    router.push(
+                                      `/helpers?section=${sectionData.id}&helper=${option.id}`
+                                    )
+                                  }
                                 >
                                   <label
                                     className={` 
@@ -218,7 +219,7 @@ export default function SideMenu({ section, helper }: SideMenuProps) {
               {/* Product grid */}
               <div className="lg:col-span-3">
                 <>
-                  <div className="h-96 rounded-lg border-4 border-dashed border-gray-200 lg:h-full p-2">
+                  <div className="min-h-[20rem] rounded-lg border-4 border-dashed border-gray-200 lg:h-full p-2">
                     {section && helper && SideOption[section][helper]}
                   </div>
                 </>
