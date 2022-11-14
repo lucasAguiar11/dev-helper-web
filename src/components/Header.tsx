@@ -35,6 +35,7 @@ const resources = [
 type HeaderProps = HTMLAttributes<HTMLDivElement>
 
 const Header = (props: HeaderProps) => {
+  
   return (
     <header {...props}>
       <Popover className="relative bg-white">
@@ -169,7 +170,7 @@ const Header = (props: HeaderProps) => {
               </Popover>
               {/* todo: logo no paypal */}
               <Link
-                href={process.env.PAYPAL_DONATE as string}
+                href={process.env.PAYPAL_DONATE || ''}
                 target={'_blank'}
                 className="text-base font-medium text-gray-700 hover:text-gray-900"
               >

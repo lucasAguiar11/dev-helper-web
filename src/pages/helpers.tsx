@@ -20,7 +20,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     section: (section as string) ?? null,
     helper: (helper as string) ?? null,
   }
-  console.log(dt)
   return {
     props: {
       ...dt,
