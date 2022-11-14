@@ -1,6 +1,6 @@
 import { Popover, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Bars3Icon, ChartBarIcon, LifebuoyIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { ChevronDownIcon, XMarkIcon } from '@heroicons/react/20/solid'
+import { Bars3Icon, BuildingStorefrontIcon, UserIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Fragment, HTMLAttributes } from 'react'
@@ -10,7 +10,13 @@ const validators = [
     name: 'CPF',
     description: 'Valida CPF (Cadastro de Pessoa Física).',
     href: '/helpers?section=validator&helper=cpf',
-    icon: ChartBarIcon,
+    icon: UserIcon,
+  },
+  {
+    name: 'CNPJ',
+    description: 'Valida CNPJ (Cadastro Nacional da Pessoa Jurídica).',
+    href: '/helpers?section=validator&helper=cnpj',
+    icon: BuildingStorefrontIcon,
   },
 ]
 
@@ -19,23 +25,19 @@ const generators = [
     name: 'CPF',
     description: 'Gerar CPF (Cadastro de Pessoa Física).',
     href: '/helpers?section=generator&helper=cpf',
-    icon: ChartBarIcon,
+    icon: UserIcon,
   },
-]
-
-const resources = [
   {
-    name: 'Help Center',
-    description: 'Get all of your questions answered in our forums or contact support.',
-    href: '#',
-    icon: LifebuoyIcon,
+    name: 'CNPJ',
+    description: 'Gerar CNPJ (Cadastro Nacional da Pessoa Jurídica).',
+    href: '/helpers?section=generator&helper=cpf',
+    icon: BuildingStorefrontIcon,
   },
 ]
 
 type HeaderProps = HTMLAttributes<HTMLDivElement>
 
 const Header = (props: HeaderProps) => {
-  
   return (
     <header {...props}>
       <Popover className="relative bg-white">
@@ -217,43 +219,67 @@ const Header = (props: HeaderProps) => {
                   </div>
                 </div>
                 <div className="mt-6">
+                  <div className="text-gray-700 text-sm border-b border-slate-100 font-medium pb-1 mb-3">
+                    <h3>Geradores</h3>
+                  </div>
                   <nav className="grid gap-y-8">
                     {generators.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
-                        className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+                        className="-m-3 flex flex-col justify-center rounded-md p-3 hover:bg-gray-50"
                       >
-                        <item.icon
-                          className="h-6 w-6 flex-shrink-0 text-indigo-600"
-                          aria-hidden="true"
-                        />
-                        <span className="ml-3 text-base font-medium text-gray-900">
-                          {item.name}
-                        </span>
+                        <div className="flex items-center">
+                          <item.icon
+                            className="h-6 w-6 flex-shrink-0 text-indigo-600"
+                            aria-hidden="true"
+                          />
+                          <p className="ml-3 text-base font-medium text-gray-900">{item.name}</p>
+                        </div>
+
+                        <p className="pl-9 text-sm text-gray-500">{item.description}</p>
+                      </a>
+                    ))}
+                  </nav>
+                </div>
+                <div className="mt-6">
+                  <div className="text-gray700 text-sm border-b border-slate-100 font-medium pb-1 mb-3">
+                    <h3>Validadores</h3>
+                  </div>
+                  <nav className="grid gap-y-8">
+                    {validators.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className="-m-3 flex flex-col justify-center rounded-md p-3 hover:bg-gray-50"
+                      >
+                        <div className="flex items-center">
+                          <item.icon
+                            className="h-6 w-6 flex-shrink-0 text-indigo-600"
+                            aria-hidden="true"
+                          />
+                          <p className="ml-3 text-base font-medium text-gray-900">{item.name}</p>
+                        </div>
+
+                        <p className="pl-9 text-sm text-gray-500">{item.description}</p>
                       </a>
                     ))}
                   </nav>
                 </div>
               </div>
+
               <div className="space-y-6 py-6 px-5">
                 <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                  <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                    Pricing
+                  <Link
+                    href={process.env.PAYPAL_DONATE || ''}
+                    target={'_blank'}
+                    className="text-base font-medium text-gray-700 hover:text-gray-900"
+                  >
+                    Doações
+                  </Link>
+                  <a href="#" className="text-base font-medium text-gray-700 hover:text-gray-900">
+                    Sobre
                   </a>
-
-                  <a href="#" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                    Docs
-                  </a>
-                  {resources.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="text-base font-medium text-gray-900 hover:text-gray-700"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
                 </div>
               </div>
             </div>

@@ -2,12 +2,12 @@ export default function Home() {
   return (
     <>
       {/* <Header /> */}
-      <div className="isolate bg-white">
+      <div className="bg-white">
         {/* <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
           <BackgroundSVG className="w-screen h-screen" />
         </div> */}
         <main>
-          <div className="relative px-6 lg:px-8">
+          <div className="px-6 lg:px-8">
             <div className="mx-auto max-w-3xl pt-20 pb-32 sm:pt-32 sm:pb-40">
               <div>
                 <div>
