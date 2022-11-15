@@ -16,6 +16,7 @@ export const CnpjValidator = () => {
             placeholder="Ex: 11111111111111"
             onChange={(e) => setIsValid(validCnpj(e.target.value))}
             maxLength={18}
+            inputMode={'numeric'}
           />
         </div>
         <div className="flex items-center">

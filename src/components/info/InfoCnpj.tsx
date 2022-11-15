@@ -11,7 +11,7 @@ export const InfoCnpj = () => {
     </div>
     <div className="flex flex-col px-2 pt-6 sm:px-5 sm:pt-0">
       <h1 className="text-xl text-gray-700">Identificação</h1>
-      <p className="p-2 text-sm text-gray-600 text-justify">
+      <p className="py-2 text-sm text-gray-600 text-justify">
         O Cadastro mantido pela Receita Federal vai lhe entregar 14 dígitos para serem sua
         identificação empresarial. O modelo do número segue este padrão: XX.XXX.XXX/0001-XX. O
         número do CNPJ pode ser dividido em blocos: a inscrição, que são os primeiros 8 dígitos,

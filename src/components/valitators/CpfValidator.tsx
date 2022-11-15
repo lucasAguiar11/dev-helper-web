@@ -16,6 +16,7 @@ export const CpfValidator = () => {
             placeholder="Ex: 11111111111"
             onChange={(e) => setIsValid(validCpf(e.target.value))}
             maxLength={14}
+            inputMode={'numeric'}
           />
         </div>
         <div className="flex items-center">

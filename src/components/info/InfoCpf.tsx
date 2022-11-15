@@ -11,7 +11,7 @@ export const InfoCpf = () => {
       </div>
       <div className="flex flex-col px-2 pt-6 sm:px-5 sm:pt-0">
         <h1 className="text-xl text-gray-700">Identificar o Estado</h1>
-        <p className="p-2 text-sm text-gray-600 text-justify">
+        <p className="py-2 text-sm text-gray-600 text-justify">
           Uma forma de conferir o número do CPF é identificar o Estado em que foi emitido. Esse
           número corresponde ao ultimo algarismo anterior aos dois dígitos de controle. No exemplo
           CPF nº 000.000.008-00, o número 8 mostra que esse documento foi emitido no estado de São
