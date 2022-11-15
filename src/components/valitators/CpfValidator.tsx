@@ -9,7 +9,7 @@ export const CpfValidator = () => {
 
   return (
     <div className="flex flex-col  mt-5">
-      <div className="flex flex-row mx-2">
+      <div className="flex flex-col sm:flex-row mx-2">
         <div className="max-w-sm">
           <Input
             label="Validar CPF"
@@ -19,11 +19,15 @@ export const CpfValidator = () => {
           />
         </div>
         <div className="flex items-center">
-          <span className="text-xl text-gray-500 pt-7 pl-3">Resultado:</span>
+          <span className="text-xl text-gray-500 pt-3 sm:pt-7 sm:pl-3">Resultado:</span>
           {isValid ? (
-            <span className="text-2xl text-green-500 pt-7 pl-2 font-medium">Valido! 👍</span>
+            <span className="text-2xl text-green-500 pt-3 sm:pt-7 pl-2 font-medium">
+              Valido! 👍
+            </span>
           ) : (
-            <span className="text-2xl text-red-500 pt-7 pl-2 font-medium">Inválido! 👎</span>
+            <span className="text-2xl text-red-500 pt-3 sm:pt-7 pl-2 font-medium">
+              Inválido! 👎
+            </span>
           )}
         </div>
       </div>

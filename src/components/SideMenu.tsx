@@ -86,17 +86,20 @@ export default function SideMenu({ section, helper }: SideMenuProps) {
                   <form className="mt-4 border-t border-gray-200">
                     <h3 className="sr-only">Categories</h3>
 
-                    {filters.map((section) => (
+                    {filters.map((sectionData) => (
                       <Disclosure
                         as="div"
-                        key={section.id}
+                        key={sectionData.id}
+                        defaultOpen={sectionData.id === section}
                         className="border-t border-gray-200 px-4 py-6"
                       >
                         {({ open }) => (
                           <>
                             <h3 className="-mx-2 -my-3 flow-root">
                               <Disclosure.Button className="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
-                                <span className="font-medium text-gray-900">{section.name}</span>
+                                <span className="font-medium text-gray-900">
+                                  {sectionData.name}
+                                </span>
                                 <span className="ml-6 flex items-center">
                                   {open ? (
                                     <MinusIcon className="h-5 w-5" aria-hidden="true" />
@@ -108,16 +111,33 @@ export default function SideMenu({ section, helper }: SideMenuProps) {
                             </h3>
                             <Disclosure.Panel className="pt-6">
                               <div className="space-y-6">
-                                {section.options.map((option, optionIdx) => (
-                                  <div key={option.id} className="flex items-center">
-                                    <label
-                                      htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
-                                      className="ml-3 min-w-0 flex-1 text-gray-500"
+                                {sectionData.options.map((option) => {
+                                  const selected =
+                                    option.id === helper && sectionData.id === section
+                                  return (
+                                    <div
+                                      key={option.id}
+                                      className={`flex items-center cursor-pointer 
+                                      rounded-md py-2 group hover:bg-secondary/20
+                                      ${selected ? 'bg-secondary/10' : ''}
+                                      `}
+                                      onClick={() =>
+                                        router.push(
+                                          `/helpers?section=${sectionData.id}&helper=${option.id}`
+                                        )
+                                      }
                                     >
-                                      {option.label}
-                                    </label>
-                                  </div>
-                                ))}
+                                      <label className="ml-3 min-w-0 flex-1 text-gray-500">
+                                        {option.label}
+                                      </label>
+                                      <small
+                                        className={`mr-3 text-xs text-gray-500 group-hover:text-gray-700`}
+                                      >
+                                        {option.description}
+                                      </small>
+                                    </div>
+                                  )
+                                })}
                               </div>
                             </Disclosure.Panel>
                           </>
