@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Home() {
   return (
     <>
@@ -19,26 +21,27 @@ export default function Home() {
                     <span className="text-primary font-bold">&quot;helpers&quot;</span> para o seu
                     dia a dia. 😁
                   </p>
-                  {/* <div className="mt-8 flex gap-x-4 sm:justify-center">
-                    <a
-                      href="#"
-                      className="inline-block rounded-lg bg-primary px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-primary hover:bg-secondary hover:ring-indigo-700"
+                  <div className="mt-8 flex gap-x-4 sm:justify-center">
+                    <Link
+                      href="/helpers?section=validator"
+                      className="inline-block rounded-lg bg-primary px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-primary hover:bg-primary/80 hover:ring-primary"
                     >
                       Preciso Validar
-                      <span className="text-indigo-200" aria-hidden="true">
+                      <span className="text-gray-200" aria-hidden="true">
                         &rarr;
                       </span>
-                    </a>
-                    <a
-                      href="#"
+                    </Link>
+
+                    <Link
+                      href="/helpers?section=generator"
                       className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
                     >
                       Quero Gerar
-                      <span className="text-gray-400" aria-hidden="true">
+                      <span className="text-gray-200" aria-hidden="true">
                         &rarr;
                       </span>
-                    </a>
-                  </div> */}
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
