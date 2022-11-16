@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <>
       {/* <Header /> */}
-      <div className="bg-white">
+      <div className="bg-white h-[calc(100vh-20vh)]">
         {/* <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
           <BackgroundSVG className="w-screen h-screen" />
         </div> */}
@@ -16,10 +16,10 @@ export default function Home() {
                   </h1>
                   <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
                     Confira aqui os melhores{' '}
-                    <span className="text-primary font-medium">&quot;helpers&quot;</span> para o seu
+                    <span className="text-primary font-bold">&quot;helpers&quot;</span> para o seu
                     dia a dia. 😁
                   </p>
-                  <div className="mt-8 flex gap-x-4 sm:justify-center">
+                  {/* <div className="mt-8 flex gap-x-4 sm:justify-center">
                     <a
                       href="#"
                       className="inline-block rounded-lg bg-primary px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-primary hover:bg-secondary hover:ring-indigo-700"
@@ -38,7 +38,7 @@ export default function Home() {
                         &rarr;
                       </span>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

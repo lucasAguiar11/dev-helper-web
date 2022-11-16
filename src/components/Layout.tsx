@@ -1,4 +1,5 @@
 import { HTMLAttributes } from 'react'
+import Footer from './Footer'
 import Header from './Header'
 import { Metadata } from './Metadata'
 
@@ -10,6 +11,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Metadata />
       <Header />
       {children}
+      <Footer />
     </>
   )
 }

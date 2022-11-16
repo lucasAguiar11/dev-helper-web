@@ -21,7 +21,7 @@ export const CnpjGenerator = () => {
             onClick={() => setCnpj(genCnpj(pointing))}
             icon={
               <Cog6ToothIcon
-                className="h-5 w-5 text-gray-50/30 group-hover:text-white/25"
+                className="h-5 w-5 text-gray-50/60 group-hover:text-white/25"
                 aria-hidden="true"
               />
             }

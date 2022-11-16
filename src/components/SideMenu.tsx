@@ -118,8 +118,8 @@ export default function SideMenu({ section, helper }: SideMenuProps) {
                                     <div
                                       key={option.id}
                                       className={`flex items-center cursor-pointer 
-                                      rounded-md py-2 group hover:bg-secondary/20
-                                      ${selected ? 'bg-secondary/10' : ''}
+                                      rounded-md py-2 group hover:bg-primary/20
+                                      ${selected ? 'bg-primary/10' : ''}
                                       `}
                                       onClick={() =>
                                         router.push(
@@ -180,7 +180,7 @@ export default function SideMenu({ section, helper }: SideMenuProps) {
             </div>
           </div>
 
-          <section aria-labelledby="products-heading" className="pt-6 pb-24">
+          <section className="pt-6 pb-24">
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
               {/* Filters */}
               <form className="hidden lg:block">
@@ -215,8 +215,8 @@ export default function SideMenu({ section, helper }: SideMenuProps) {
                                   key={option.id}
                                   className={`
                                   flex flex-col justify-center cursor-pointer 
-                                  rounded-md py-2 group hover:bg-secondary/20
-                                  ${selected ? 'bg-secondary/10' : ''}
+                                  rounded-md py-2 group hover:bg-primary/20
+                                  ${selected ? 'bg-primary/30' : ''}
                                   `}
                                   onClick={() =>
                                     router.push(
@@ -226,16 +226,16 @@ export default function SideMenu({ section, helper }: SideMenuProps) {
                                 >
                                   <label
                                     className={` 
-                                    ml-3 text-sm text-gray-600 cursor-pointer group-hover:text-gray-900 group-hover:font-medium
-                                    ${selected ? 'font-medium text-gray-900' : ''}
+                                    ml-3 text-sm cursor-pointer group-hover:text-gray-900 group-hover:font-medium
+                                    ${selected ? 'font-medium text-black' : 'text-gray-600'}
                                 `}
                                   >
                                     {option.label}
                                   </label>
                                   <small
                                     className={`
-                                    ml-3 text-xs text-gray-500 group-hover:text-gray-700
-                                    ${selected ? 'text-gray-700' : ''}
+                                    ml-3 text-xs group-hover:text-gray-700
+                                    ${selected ? 'text-gray-800' : 'text-gray-500'}
                                 `}
                                   >
                                     {option.description}
@@ -254,7 +254,7 @@ export default function SideMenu({ section, helper }: SideMenuProps) {
               {/* Product grid */}
               <div className="lg:col-span-3">
                 <>
-                  <div className="min-h-[20rem] rounded-lg border-4 border-dashed border-gray-200 lg:h-full p-2">
+                  <div className="min-h-[20rem] rounded-lg border-4 border-dashed border-primary/60 lg:h-full p-2">
                     {section && helper && SideOption[section][helper]}
                   </div>
                 </>

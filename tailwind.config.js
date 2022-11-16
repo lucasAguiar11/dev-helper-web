@@ -28,8 +28,8 @@ module.exports = {
     },
     colors: {
       ...colors,
-      primary: '#5c65c0',
-      secondary: '#6f95ff',
+      primary: '#fb9a2d',
+      secondary: '#215aa8',
     },
 
     extend: {},
