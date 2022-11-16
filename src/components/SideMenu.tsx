@@ -6,6 +6,7 @@ import { Fragment, ReactNode, useState } from 'react'
 
 import Alert from '../components/primitives/Alert'
 import { CnpjGenerator, CpfGenerator } from './generators'
+import ChoiceSVG from './svgs/ChoiceSVG'
 import { CnpjValidator, CpfValidator } from './valitators'
 
 const filters = [
@@ -256,6 +257,17 @@ export default function SideMenu({ section, helper }: SideMenuProps) {
                 <>
                   <div className="min-h-[20rem] rounded-lg border-4 border-dashed border-primary/60 lg:h-full p-2">
                     {section && helper && SideOption[section][helper]}
+                    {(!helper || !section) && (
+                      <div className="flex flex-col items-center justify-center h-full">
+                        <p className="text-base mt-5 text-gray-600">
+                          Selecione um <span className="text-primary font-bold">&quot;helpers&quot;</span> para começar
+                        </p>
+                        <ChoiceSVG className="w-96" />
+                        <a className="text-xs" href="https://storyset.com/people">
+                          People illustrations by Storyset
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </>
                 {/* /End replace */}
