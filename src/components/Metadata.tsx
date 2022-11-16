@@ -1,6 +1,8 @@
+import { NextSeo } from 'next-seo'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { NextSeo } from 'next-seo'
+import Script from 'next/script'
+
 // import Script from 'next/script'
 
 type MetadataProps = {
@@ -50,7 +52,7 @@ export const Metadata = ({
           site_name: 'Dev Helper',
         }}
       />
-      {/* <Script
+      <Script
         async
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_ID}`}
         strategy="afterInteractive"
@@ -63,7 +65,7 @@ export const Metadata = ({
 
           gtag('config', '${process.env.GA_ID}')
         `}
-      </Script> */}
+      </Script>
     </>
   )
 }
