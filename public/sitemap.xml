@@ -5,29 +5,27 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
   <url>
     <loc>https://dev-helper.com.br/</loc>
-    <lastmod>2022-11-16T16:44:14+00:00</lastmod>
+    <lastmod>2022-11-16T16:54:17+00:00</lastmod>
+    <priority>1.00</priority>
   </url>
-
-  <url>
-    <loc>https://dev-helper.com.br/helpers</loc>
-    <lastmod>2022-11-16T16:44:14+00:00</lastmod>
-  </url>
-
   <url>
     <loc>https://dev-helper.com.br/about</loc>
-    <lastmod>2022-11-16T16:44:14+00:00</lastmod>
+    <lastmod>2022-11-16T16:54:17+00:00</lastmod>
+    <priority>0.80</priority>
   </url>
-
-  <url>
-    <loc>https://dev-helper.com.br/privacy-policies</loc>
-    <lastmod>2022-11-16T16:44:14+00:00</lastmod>
-  </url>
-
   <url>
     <loc>https://dev-helper.com.br/terms</loc>
-    <lastmod>2022-11-16T16:44:14+00:00</lastmod>
+    <lastmod>2022-11-16T16:54:17+00:00</lastmod>
+    <priority>0.80</priority>
   </url>
+  <url>
+    <loc>https://dev-helper.com.br/privacy-policies</loc>
+    <lastmod>2022-11-16T16:54:17+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+
 
 </urlset>
