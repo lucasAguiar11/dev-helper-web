@@ -1,0 +1,19 @@
+name: 'Dev Helper CI'
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches: ['main']
+
+# definindo o que será executado
+jobs:
+  linter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run install
+        run: yarn install
+
+      - name: Run linter
+        run: yarn lint
