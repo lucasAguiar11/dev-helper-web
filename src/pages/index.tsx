@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Ad from '../components/primitives/Ad'
 
 export default function Home() {
   return (
@@ -40,7 +41,7 @@ export default function Home() {
                   </span>
                 </Link>
               </div>
-              <div className="h-full"></div>
+              <Ad height={100} width={100} slotId={'1648228866'} />
             </div>
           </div>
         </main>
