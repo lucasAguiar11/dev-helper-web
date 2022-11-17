@@ -41,7 +41,7 @@ export default function Home() {
                   </span>
                 </Link>
               </div>
-              <Ad height={100} width={100} slotId={'1648228866'} />
+              <Ad slotId={'1648228866'} className="mt-5" />
             </div>
           </div>
         </main>
