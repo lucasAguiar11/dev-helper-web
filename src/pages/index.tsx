@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Script from 'next/script'
 
 export default function Home() {
   return (
@@ -48,6 +49,21 @@ export default function Home() {
           </div>
         </main>
       </div>
+      <Script
+        async
+        id="ads-script-1"
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.ADSENSE_CLIENT}`}
+      />
+      <ins
+        className="adsbygoogle"
+        style={{ display: 'block' }}
+        data-ad-client="ca-pub-7889378758959768"
+        data-ad-slot="8186002461"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+
+      <Script id="ads-script-2">(adsbygoogle = window.adsbygoogle || []).push({});</Script>
     </>
   )
 }
