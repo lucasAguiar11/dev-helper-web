@@ -3,8 +3,6 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Script from 'next/script'
 
-// import Script from 'next/script'
-
 type MetadataProps = {
   title?: string
   description?: string
@@ -52,20 +50,27 @@ export const Metadata = ({
           site_name: 'Dev Helper',
         }}
       />
+
       <Script
+        strategy="afterInteractive"
         async
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_ID}`}
-        strategy="afterInteractive"
       />
-      <Script id="google-analytics" strategy="afterInteractive">
+
+      <Script strategy="afterInteractive" id="google-analytics">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', '${process.env.GA_ID}')
-        `}
+          gtag('config', '${process.env.GA_ID}');
+       `}
       </Script>
+
+      <Script
+        async
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.ADSENSE_CLIENT}`}
+      />
     </>
   )
 }
