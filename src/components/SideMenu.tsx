@@ -1,46 +1,57 @@
 import { Dialog, Disclosure, Transition } from '@headlessui/react'
 import { FunnelIcon, MinusIcon, PlusIcon } from '@heroicons/react/20/solid'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import { useRouter } from 'next/router'
-import { Fragment, ReactNode, useState } from 'react'
+import Link from 'next/link'
+import { Fragment, HTMLAttributes, useState } from 'react'
 
 import Alert from '../components/primitives/Alert'
-import { CnpjGenerator, CpfGenerator } from './generators'
-import ChoiceSVG from './svgs/ChoiceSVG'
-import { CnpjValidator, CpfValidator } from './valitators'
 
 const filters = [
   {
     id: 'validator',
     name: 'Validadores',
     options: [
-      { id: 'cpf', label: 'CPF', description: 'Cadastro de Pessoa Física' },
-      { id: 'cnpj', label: 'CNPJ', description: 'Cadastro Nacional da Pessoa Jurídica' },
+      {
+        id: 'cpf',
+        label: 'CPF',
+        description: 'Cadastro de Pessoa Física',
+        url: '/helpers/validator/cpf',
+      },
+      {
+        id: 'cnpj',
+        label: 'CNPJ',
+        description: 'Cadastro Nacional da Pessoa Jurídica',
+        url: '/helpers/validator/cnpj',
+      },
     ],
   },
   {
     id: 'generator',
     name: 'Geradores',
     options: [
-      { id: 'cpf', label: 'CPF', description: 'Cadastro de Pessoa Física' },
-      { id: 'cnpj', label: 'CNPJ', description: 'Cadastro Nacional da Pessoa Jurídica' },
+      {
+        id: 'cpf',
+        label: 'CPF',
+        description: 'Cadastro de Pessoa Física',
+        url: '/helpers/generator/cpf',
+      },
+      {
+        id: 'cnpj',
+        label: 'CNPJ',
+        description: 'Cadastro Nacional da Pessoa Jurídica',
+        url: '/helpers/generator/cnpj',
+      },
     ],
   },
 ]
 
 type SideMenuProps = {
   section: string
-  helper: string
-}
+  helper?: string
+} & HTMLAttributes<HTMLDivElement>
 
-const SideOption: { [key: string]: { [key: string]: ReactNode } } = {
-  validator: { cpf: <CpfValidator />, cnpj: <CnpjValidator /> },
-  generator: { cpf: <CpfGenerator />, cnpj: <CnpjGenerator /> },
-}
-
-export default function SideMenu({ section, helper }: SideMenuProps) {
+export default function SideMenu({ section, helper, children }: SideMenuProps) {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
-  const router = useRouter()
 
   return (
     <div className="bg-white">
@@ -116,27 +127,23 @@ export default function SideMenu({ section, helper }: SideMenuProps) {
                                   const selected =
                                     option.id === helper && sectionData.id === section
                                   return (
-                                    <div
-                                      key={option.id}
-                                      className={`flex items-center cursor-pointer 
-                                      rounded-md py-2 group hover:bg-primary/20
+                                    <Link key={option.id} href={option.url}>
+                                      <div
+                                        className={`flex items-center cursor-pointer
+                                      rounded-md py-2 group hover:bg-primary/20 my-2
                                       ${selected ? 'bg-primary/10' : ''}
                                       `}
-                                      onClick={() =>
-                                        router.push(
-                                          `/helpers?section=${sectionData.id}&helper=${option.id}`
-                                        )
-                                      }
-                                    >
-                                      <label className="ml-3 min-w-0 flex-1 text-gray-500">
-                                        {option.label}
-                                      </label>
-                                      <small
-                                        className={`mr-3 text-xs text-gray-500 group-hover:text-gray-700`}
                                       >
-                                        {option.description}
-                                      </small>
-                                    </div>
+                                        <label className="ml-3 min-w-0 flex-1 text-gray-500">
+                                          {option.label}
+                                        </label>
+                                        <small
+                                          className={`mr-3 text-xs text-gray-500 group-hover:text-gray-700`}
+                                        >
+                                          {option.description}
+                                        </small>
+                                      </div>
+                                    </Link>
                                   )
                                 })}
                               </div>
@@ -212,36 +219,32 @@ export default function SideMenu({ section, helper }: SideMenuProps) {
                             {sectionData.options.map((option) => {
                               const selected = option.id === helper && sectionData.id === section
                               return (
-                                <div
-                                  key={option.id}
-                                  className={`
-                                  flex flex-col justify-center cursor-pointer 
-                                  rounded-md py-2 group hover:bg-primary/20
+                                <Link key={option.id} href={option.url}>
+                                  <div
+                                    className={`
+                                  flex flex-col justify-center cursor-pointer
+                                  rounded-md py-2 group hover:bg-primary/20 my-2
                                   ${selected ? 'bg-primary/30' : ''}
                                   `}
-                                  onClick={() =>
-                                    router.push(
-                                      `/helpers?section=${sectionData.id}&helper=${option.id}`
-                                    )
-                                  }
-                                >
-                                  <label
-                                    className={` 
+                                  >
+                                    <label
+                                      className={`
                                     ml-3 text-sm cursor-pointer group-hover:text-gray-900 group-hover:font-medium
                                     ${selected ? 'font-medium text-black' : 'text-gray-600'}
                                 `}
-                                  >
-                                    {option.label}
-                                  </label>
-                                  <small
-                                    className={`
+                                    >
+                                      {option.label}
+                                    </label>
+                                    <small
+                                      className={`
                                     ml-3 text-xs group-hover:text-gray-700
                                     ${selected ? 'text-gray-800' : 'text-gray-500'}
                                 `}
-                                  >
-                                    {option.description}
-                                  </small>
-                                </div>
+                                    >
+                                      {option.description}
+                                    </small>
+                                  </div>
+                                </Link>
                               )
                             })}
                           </div>
@@ -256,18 +259,7 @@ export default function SideMenu({ section, helper }: SideMenuProps) {
               <div className="lg:col-span-3">
                 <>
                   <div className="min-h-[20rem] rounded-lg border-4 border-dashed border-primary/60 lg:h-full p-2">
-                    {section && helper && SideOption[section][helper]}
-                    {(!helper || !section) && (
-                      <div className="flex flex-col items-center justify-center h-full">
-                        <p className="text-base mt-5 text-gray-600">
-                          Selecione um <span className="text-primary font-bold">&quot;helpers&quot;</span> para começar
-                        </p>
-                        <ChoiceSVG className="w-96" />
-                        <a className="text-xs" href="https://storyset.com/people">
-                          People illustrations by Storyset
-                        </a>
-                      </div>
-                    )}
+                    {children}
                   </div>
                 </>
                 {/* /End replace */}

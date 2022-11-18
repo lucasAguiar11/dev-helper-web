@@ -9,13 +9,13 @@ const validators = [
   {
     name: 'CPF',
     description: 'Valida CPF (Cadastro de Pessoa Física).',
-    href: '/helpers?section=validator&helper=cpf',
+    href: '/helpers/validator/cpf',
     icon: UserIcon,
   },
   {
     name: 'CNPJ',
     description: 'Valida CNPJ (Cadastro Nacional da Pessoa Jurídica).',
-    href: '/helpers?section=validator&helper=cnpj',
+    href: '/helpers/validator/cnpj',
     icon: BuildingStorefrontIcon,
   },
 ]
@@ -24,13 +24,13 @@ const generators = [
   {
     name: 'CPF',
     description: 'Gerar CPF (Cadastro de Pessoa Física).',
-    href: '/helpers?section=generator&helper=cpf',
+    href: '/helpers/generator/cpf',
     icon: UserIcon,
   },
   {
     name: 'CNPJ',
     description: 'Gerar CNPJ (Cadastro Nacional da Pessoa Jurídica).',
-    href: '/helpers?section=generator&helper=cnpj',
+    href: '/helpers/generator/cnpj',
     icon: BuildingStorefrontIcon,
   },
 ]
