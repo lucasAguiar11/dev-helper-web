@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Ad from '../components/primitives/Ad'
+// import BackgroundSVG from '../components/svgs/BackgroundSVG'
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
               </p>
               <div className="mt-8 flex gap-x-4 sm:justify-center">
                 <Link
-                  href="/helpers?section=validator"
+                  href="/helpers/validator"
                   className="inline-block rounded-lg bg-primary px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-primary hover:bg-primary/80 hover:ring-primary"
                 >
                   Preciso Validar
@@ -32,7 +33,7 @@ export default function Home() {
                 </Link>
 
                 <Link
-                  href="/helpers?section=generator"
+                  href="/helpers/generator"
                   className="inline-block rounded-lg px-4 py-1.5 text-base font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
                 >
                   Quero Gerar
@@ -41,7 +42,7 @@ export default function Home() {
                   </span>
                 </Link>
               </div>
-              <Ad slotId={'1648228866'} className="mt-5" />
+              <Ad slotId={'1648228866'} className="mt-10" />
             </div>
           </div>
         </main>
