@@ -20,7 +20,10 @@ const Cpf = () => {
         canonical="/generator/cpf"
       />
       <SideMenu section="generator" helper="cpf">
-        <div className="flex flex-col  mt-5">
+        <div className="flex flex-col">
+          <h2 className="mt-3 mb-5 mx-2 text-2xl font-medium tracking-tight text-gray-900">
+            Gerador de CPF
+          </h2>
           <div className="flex flex-row mx-2">
             <div className="max-w-sm">
               <Input label="Novo CPF" readOnly placeholder="Ex: 11111111111" value={cpf} />

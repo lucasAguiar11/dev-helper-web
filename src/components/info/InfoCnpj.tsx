@@ -2,7 +2,7 @@ export const InfoCnpj = () => {
   return (
     <div className="flex flex-col sm:flex-row pt-6">
     <div className="flex flex-col px-2 sm:px-5">
-      <h1 className="text-xl text-gray-700">O que é?</h1>
+      <h3 className="text-xl text-gray-700">O que é?</h3>
       <p className="pt-2 text-sm text-gray-600 text-justify">
         O Cadastro Nacional de Pessoas Jurídicas (CNPJ) é o número designado pela Receita
         Federal na abertura da empresa. Ele serve para identificar o negócio nos mais diversos
@@ -10,7 +10,7 @@ export const InfoCnpj = () => {
       </p>
     </div>
     <div className="flex flex-col px-2 pt-6 sm:px-5 sm:pt-0">
-      <h1 className="text-xl text-gray-700">Identificação</h1>
+      <h3 className="text-xl text-gray-700">Identificação</h3>
       <p className="py-2 text-sm text-gray-600 text-justify">
         O Cadastro mantido pela Receita Federal vai lhe entregar 14 dígitos para serem sua
         identificação empresarial. O modelo do número segue este padrão: XX.XXX.XXX/0001-XX. O

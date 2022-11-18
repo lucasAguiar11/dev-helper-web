@@ -2,7 +2,7 @@ export const InfoCpf = () => {
   return (
     <div className="flex flex-col sm:flex-row pt-6">
       <div className="flex flex-col px-2 sm:px-5">
-        <h1 className="text-xl text-gray-700">O que é?</h1>
+        <h3 className="text-xl text-gray-700">O que é?</h3>
         <p className="pt-2 text-sm text-gray-600 text-justify">
           O CPF é o Cadastro de Pessoa Física. Ele é um documento feito pela Receita Federal e serve
           para identificar os contribuintes. O CPF é uma numeração com 11 dígitos, que só mudam por
@@ -10,7 +10,7 @@ export const InfoCpf = () => {
         </p>
       </div>
       <div className="flex flex-col px-2 pt-6 sm:px-5 sm:pt-0">
-        <h1 className="text-xl text-gray-700">Identificar o Estado</h1>
+        <h3 className="text-xl text-gray-700">Identificar o Estado</h3>
         <p className="py-2 text-sm text-gray-600 text-justify">
           Uma forma de conferir o número do CPF é identificar o Estado em que foi emitido. Esse
           número corresponde ao ultimo algarismo anterior aos dois dígitos de controle. No exemplo

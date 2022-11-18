@@ -16,7 +16,10 @@ const Cnpj = () => {
         canonical="/validator/cnpj"
       />
       <SideMenu section="validator" helper="cnpj">
-        <div className="flex flex-col mt-5">
+        <div className="flex flex-col">
+          <h2 className="mt-3 mb-5 mx-2 text-2xl font-medium tracking-tight text-gray-900">
+            Validador de CNPJ
+          </h2>
           <div className="flex flex-col sm:flex-row mx-2">
             <div className="max-w-sm">
               <Input

@@ -130,7 +130,7 @@ export default function SideMenu({ section, helper, children }: SideMenuProps) {
                                     <Link key={option.id} href={option.url}>
                                       <div
                                         className={`flex items-center cursor-pointer
-                                      rounded-md py-2 group hover:bg-primary/20
+                                      rounded-md py-2 group hover:bg-primary/20 my-2
                                       ${selected ? 'bg-primary/10' : ''}
                                       `}
                                       >
@@ -223,7 +223,7 @@ export default function SideMenu({ section, helper, children }: SideMenuProps) {
                                   <div
                                     className={`
                                   flex flex-col justify-center cursor-pointer
-                                  rounded-md py-2 group hover:bg-primary/20
+                                  rounded-md py-2 group hover:bg-primary/20 my-2
                                   ${selected ? 'bg-primary/30' : ''}
                                   `}
                                   >
