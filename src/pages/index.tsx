@@ -1,5 +1,7 @@
 import Link from 'next/link'
-import Ad from '../components/primitives/Ad'
+
+// import Ad from '../components/primitives/Ad'
+
 // import BackgroundSVG from '../components/svgs/BackgroundSVG'
 
 export default function Home() {
@@ -42,7 +44,7 @@ export default function Home() {
                   </span>
                 </Link>
               </div>
-              <Ad slotId={'1648228866'} className="mt-10" />
+              {/* <Ad slotId={'1648228866'} className="mt-10" /> */}
             </div>
           </div>
         </main>
