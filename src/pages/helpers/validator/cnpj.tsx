@@ -13,7 +13,7 @@ const Cnpj = () => {
       <Metadata
         title="Validador de CNPJ"
         description="Ferramenta online para verificar seu o número do CNPJ é válido ou falso. Calculamos o dígito verificador do CNPJ."
-        canonical="/validator/cnpj"
+        canonical="/helpers/validator/cnpj"
       />
       <SideMenu section="validator" helper="cnpj">
         <div className="flex flex-col">

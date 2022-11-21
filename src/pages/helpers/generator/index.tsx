@@ -8,7 +8,7 @@ const Generator = () => {
       <Metadata
         title="Nossos Geradores"
         description="Ferramenta online para gerar CPF e CNPJ válidos. Geramos o dígito verificador do CPF e CNPJ."
-        canonical="/validator"
+        canonical="/helpers/validator"
       />
       <SideMenu section="generator">
         <div className="flex flex-col items-center justify-center h-full">

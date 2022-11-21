@@ -13,7 +13,7 @@ const Cpf = () => {
       <Metadata
         title="Validador de CPF"
         description="Ferramenta online para verificar seu o número do CPF é válido ou falso. Calculamos o dígito verificador do CPF."
-        canonical="/validator/cpf"
+        canonical="/helpers/validator/cpf"
       />
       <SideMenu section="validator" helper="cpf">
         <div className="flex flex-col">

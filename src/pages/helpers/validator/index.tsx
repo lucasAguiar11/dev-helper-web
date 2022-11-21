@@ -8,7 +8,7 @@ const Validator = () => {
       <Metadata
         title="Nossos Validadores"
         description="Ferramenta online para verificar se CPF ou CNPJ são válidos ou não. Calculamos o dígito verificador do CPF e CNPJ."
-        canonical="/validator"
+        canonical="/helpers/validator"
       />
       <SideMenu section="validator">
         <div className="flex flex-col items-center justify-center h-full">

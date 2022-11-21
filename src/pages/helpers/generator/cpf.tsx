@@ -17,7 +17,7 @@ const Cpf = () => {
       <Metadata
         title="Gerador de CPF"
         description="Ferramenta online de gerar CPF válidos! Nosso gerador de CPF ainda tem a opção de gerar com pontos e sem os pontos entre os números."
-        canonical="/generator/cpf"
+        canonical="/helpers/generator/cpf"
       />
       <SideMenu section="generator" helper="cpf">
         <div className="flex flex-col">
