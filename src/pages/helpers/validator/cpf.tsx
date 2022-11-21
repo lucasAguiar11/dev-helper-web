@@ -1,4 +1,5 @@
 import { useState } from 'react'
+
 import { InfoCpf } from '../../../components/info/InfoCpf'
 import { Metadata } from '../../../components/Metadata'
 import { Input } from '../../../components/primitives/Input'
