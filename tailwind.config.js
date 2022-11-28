@@ -32,7 +32,8 @@ module.exports = {
       secondary: '#215aa8',
     },
 
-    extend: {},
+    extend: {
+    },
   },
   plugins: [require('@tailwindcss/forms')],
 }

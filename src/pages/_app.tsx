@@ -46,7 +46,7 @@ export default function App({ Component, pageProps }: AppProps) {
       {/* Google Adsense */}
       <Script
         async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7889378758959768"
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID}`}
       ></Script>
       <Layout>
         <Component {...pageProps} />

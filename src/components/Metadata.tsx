@@ -27,7 +27,7 @@ export const Metadata = ({
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1"
         />
-        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="twitter:title" content={`${title} | Dev Helper`} />
         <meta name="twitter:creator" content={author} />
         <meta name="author" content={author} />

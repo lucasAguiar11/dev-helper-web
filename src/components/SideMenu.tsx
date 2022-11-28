@@ -43,6 +43,18 @@ const filters = [
       },
     ],
   },
+  {
+    id: 'others',
+    name: 'Outros',
+    options: [
+      {
+        id: 'now',
+        label: 'UTC',
+        description: 'Coordinated Universal Time',
+        url: '/helpers/others/now',
+      },
+    ],
+  },
 ]
 
 type SideMenuProps = {
