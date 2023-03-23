@@ -15,7 +15,7 @@ const Cnpj = () => {
     <>
       <Metadata
         title="Gerador de CNPJ"
-        description="Ferramenta online de gerar CNPJ válidos! Nosso gerador de CNPJ ainda tem a opção de gerar com pontos e sem os pontos entre os números."
+        description="Ferramenta online para gerar CNPJ válidos! Nosso gerador de CNPJ ainda tem a opção de gerar com pontos e sem os pontos entre os números."
         canonical="/helpers/generator/cnpj"
       />
       <SideMenu section="generator" helper="cnpj">
